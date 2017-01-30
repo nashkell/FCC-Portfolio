@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Project Template Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1.0, user-scalable=yes" />
+    <meta name="author" content="Buddy Harris">
+    <meta name="description" content="A site built to test Project pages">
+    <script src="https://use.typekit.net/zet4ybj.js"></script>
+    <script>
+    try {
+        Typekit.load({
+            async: true
+        });
+    } catch (e) {}
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.311.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <!-- 
+    <script type="text/javascript" src="http://use.typekit.net/zet4ybj.js"></script>
+-->
+    <!-- 
+    <link rel="icon" type="image/png" href="favicon.png" />
+ -->
+    <script type="text/javascript">
+    try {
+        Typekit.load();
+    } catch (e) {}
+    </script>
+    <link href="css/bootstrap.min.311.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="css/hamburgers.min.css" media="all" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: none;
+        font: inherit;
+        vertical-align: baseline;
+        -webkit-margin-before: 0em;
+        -webkit-margin-after: 0em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+    }
+    
+    html {
+        height: 100%;
+        width: 100%;
+    }
+    
+    p {
+        width: 100%;
+    }
+    
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .above-all {
+        z-index: 5000;
+    }
+    
+    body {
+        height: 100%;
+        transition: all 0.25s;
+        background-color: white;
+        overflow: hidden;
+        font-family: "brandon-grotesque", sans-serif;
+    }
+    
+    body #container {
+        width: 80%;
+        max-width: 800px;
+        margin-top: calc(5% + 40px);
+        margin-right: auto;
+        margin-bottom: 5%;
+        margin-left: auto;
+        z-index: 6;
+    }
+    
+    @media (max-width: 768px) {
+        body {
+            overflow: auto;
+        }
+        body #container {
+            margin: 15% auto;
+            width: 90%;
+        }
+        .item,
+        .item.w2,
+        .item.w3,
+        .item.w4,
+        .item.w5,
+        .item.w6 {
+            width: 100% !important;
+        }
+    }
+    
+    .item {
+        min-height: 150px;
+        width: 25%;
+    }
+    
+    .item.w2 {
+        width: 50%;
+        /* 
+            background-color: green;
+            */
+    }
+    
+    .item.w3 {
+        width: 75%;
+        /* 
+            background-color: pink; 
+            */
+    }
+    
+    .item.w4 {
+        width: 100%;
+    }
+    
+    .item.w5 {
+        width: 60%;
+    }
+    
+    .item.w6 {
+        width: 40%;
+    }
+    
+    @media (max-width: 400px) {
+        .item {
+            min-height: 90px;
+        }
+        .copy {
+            min-height: 90px;
+        }
+    }
+    /*==========================
+  CUSTOM CSS
+  ==========================*/
+    
+    #home {
+        top: 0;
+        left: 0;
+        position: fixed;
+        margin-top: 35px;
+        margin-left: 35px;
+        z-index: 1000;
+        font-family: "brandon-grotesque", sans-serif;
+        letter-spacing: 1.2px;
+        font-size: .8em;
+        font-weight: 500;
+        display: block;
+        box-sizing: border-box;
+    }
+    
+    #about {
+        top: 0;
+        right: 0;
+        position: fixed;
+        margin-top: 35px;
+        margin-right: 35px;
+        z-index: 1000;
+        text-align: right;
+        font-family: "brandon-grotesque", sans-serif;
+        letter-spacing: 1px;
+        font-size: .8em;
+        font-weight: 500;
+        display: block;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+    
+    #back {
+        top: 0;
+        right: 0;
+        margin-top: 35px;
+        margin-right: 35px;
+        z-index: 1000;
+        text-align: right;
+        font-family: "brandon-grotesque", sans-serif;
+        letter-spacing: 1.2px;
+        font-size: .8em;
+        font-weight: 500;
+        display: block;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+    
+    .project-head {
+        min-height: 700px;
+        position: relative;
+        margin-top: 0;
+        background-position: center center;
+        background-size: cover;
+    }
+    
+    h1 {
+        position: relative;
+        vertical-align: bottom;
+        width: 80%;
+        font-size: 50px;
+        font-weight: 700;
+        padding-bottom: 20px;
+    }
+    
+    h2 {
+        position: relative;
+        vertical-align: bottom;
+        font-size: 20px;
+        font-weight: 300;
+        width: 100%;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    a:hover {
+        color: black;
+    }
+    
+    buffer-large {
+        margin-top: 60px;
+    }
+    
+    .row {
+        margin: auto;
+    }
+    
+    p {
+        font-family: "brandon-grotesque", sans-serif;
+        line-height: 1.3em;
+        margin-bottom: 30px;
+        font-size: 1em;
+        color: #5f5f5f;
+    }
+    
+    .bTitle {
+        padding: 30px;
+        text-align: center;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        transition: opacity .3s ease-in-out;
+        -moz-transition: opacity .3s ease-in-out;
+        -webkit-transition: opacity .3s ease-in-out;
+    }
+    
+    .bMain {
+        margin: 0 auto;
+        width: 100%;
+        font-size: 2.0em;
+        font-family: "brandon-grotesque", sans-serif;
+        font-weight: 500;
+    }
+    
+    .bCaption {
+        margin: 0 auto;
+        width: 100%;
+        font-size: .65em;
+        font-family: inherit;
+    }
+    
+    h3 {
+        margin-top: 35px;
+        margin-bottom: 24px;
+        font-weight: 400;
+        font-size: 30px;
+        color: #5f5f5f;
+    }
+    /*off canvas menu */
+    
+    #site-wrapper {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    #site-canvas {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-transition: .5s ease all;
+        transition: .5s ease all;
+        padding: 5% 0;
+        /* Temp: Just spacing. */
+    }
+    
+    #site-about {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        background: #428bca;
+        overflow: hidden;
+    }
+    
+    #site-wrapper.show-nav #site-canvas {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    
+    .wrapper {
+        width: 80%;
+        max-width: 1100px;
+        margin-top: calc(5% + 40px);
+        margin-right: auto;
+        margin-bottom: 5%;
+        margin-left: auto;
+    }
+    
+    .bgImg {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        z-index: -1;
+        background-position: center center;
+        background-size: cover;
+        transition: opacity .3s ease-in-out;
+        -moz-transition: opacity .3s ease-in-out;
+        -webkit-transition: opacity .3s ease-in-out;
+    }
+    
+    .display-none {
+        display: none;
+        opacity: 0;
+    }
+
+    </style>
+</head>
+
+<body id="fade" style="opacity:0;">
+    
+  <!--
+  ==========================
+  Home link (left fixed)
+  ==========================
+  -->
+    <div id="home"><a href="http://www.buddyharrisdesign.com">Buddy Harris</a></div>
+
+  <!--
+  ==========================
+  About me link (right fixed)
+  ==========================
+  -->
+    <div class="toggle-nav" id="about">About me —</div>
+    <div id="site-wrapper">
+        <div class="bgImg"></div>
+        <div id="site-canvas">
+        
+  <!--
+  ==========================
+  About me (off canvas)
+  ==========================
+  -->
+            <div id="site-about">
+                <div class="toggle-nav" id="back">Back —</div>
+                <div class="wrapper">
+                    <img class="col-lg-8 col-xs-12" src="img/about.jpg" alt="Photo of me">
+                    <div class="col-lg-4 col-xs-12">
+                        <h4>About me</h4>
+                        <p>The process for design starts with concept, drawing, development, and execution through presentation. Embracing technology both old and new, I see myself as a passionate individual that can inform, inspire, connect, and create.
+                        </p>
+                        <p>My body of work currently includes pieces ranging from website design to motion graphics and print. Located in TriBeCa, New York; I am a graphic designer seeking work with an emphasis on typography, information, wayfinding, interface design, motion graphics, and other forms of visual and audial communication and problem solving.</p>
+                        <p>I am confident with HTML, CSS, jQuery. I am proficient in Adobe Indesign, Photoshop, Illustrator, and After Effects with some audio editing and mixing knowledge. I also have some experience in print and digital design.</p>
+                    </div>
+                </div>
+            </div>
+
+  <!--
+  ==========================
+  Hidden Hamburger
+  ==========================
+  -->
+            <div class="display-none hamburger hamburger--spring">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
+
+  <!--
+  ==========================
+  Project Links
+  ==========================
+  -->          
+            <div id="container">
+                <a href="">
+                    <div id="thought" class="item w2">
+                        <div class="bTitle">
+                            <div class="bMain" data-bproject="thought_960px" data-page="thought">Exposed</div>
+                            <div class="bCaption">UI/UX, Videography</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div id="black" class="item w2">
+                        <div class="bTitle">
+                            <div class="bMain" data-bproject="black_960px" data-page="black">Black Box</div>
+                            <div class="bCaption">UI/UX, Videography</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div id="synes" class="item w2">
+                        <div class="bTitle">
+                            <div class="bMain" data-bproject="synes_960px" data-page="synes">Synesthesia</div>
+                            <div class="bCaption">UI/UX, Videography</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div id="etc" class="item w2">
+                        <div class="bTitle">
+                            <div class="bMain" data-bproject="etc_960px" data-page="etc">etc.</div>
+                            <div class="bCaption">UI/UX, Videography</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div id="nar" class="item w2">
+                        <div class="bTitle">
+                            <div class="bMain" data-bproject="nar_960px" data-page="nar">Narrative</div>
+                            <div class="bCaption">UI/UX, Videography</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div id="cosa" class="item w2">
+                        <div class="bTitle">
+                            <div class="bMain" data-bproject="cosa_960px" data-page="cosa">Cosa</div>
+                            <div class="bCaption">UI/UX, Videography</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+  <!--
+  ==========================
+  Project off Canvas
+  ==========================
+  -->
+            <div id="project1" class="display-none" style="opacity: 0;">
+                <div class="container project-head project-inner" style="background-image: url(img/image.jpg)">
+                    <div class="container">
+                        <div class="row">
+                            <h1 class="col-lg-12" style="padding-top: 40%;">Test Title of Project</h1>
+                            <h2 class="col-lg-12">Subcaption for the project explaining case study.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p>Lorem ipsum dolor sit amet, eos ipsum paulo no. Sea mazim impedit philosophia cu, mei aeterno indoctum persequeris ea, ius diam dolores an. Eu mea civibus constituto, ea quando splendide forensibus qui. Vix no soluta repudiare percipitur, mei ex causae voluptaria. Dolor facilis aliquando mel ad, no luptatum vituperata disputando qui, sanctus mnesarchum est te. Nostrud constituam vim an, ad vim quis graeco. Sed ne vero probo detraxit, mel ne adolescens posidonium interesset. Has solet senserit no, no vero fierent pri. Eam ex possim conceptam. Et vel dolores perfecto deserunt, solet impedit ei vim. Est urbanitas disputationi mediocritatem te. Posse aliquip pro in, vocent eloquentiam ius ea, ei vis nibh affert philosophia.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3>Subject Header</h3>
+                            <p>Lorem ipsum dolor sit amet, eos ipsum paulo no. Sea mazim impedit philosophia cu, mei aeterno indoctum persequeris ea, ius diam dolores an. Eu mea civibus constituto, ea quando splendide forensibus qui. Vix no soluta repudiare percipitur, mei ex causae voluptaria. Dolor facilis aliquando mel ad, no luptatum vituperata disputando qui, sanctus mnesarchum est te. Nostrud constituam vim an, ad vim quis graeco. Sed ne vero probo detraxit, mel ne adolescens posidonium interesset. Has solet senserit no, no vero fierent pri. Eam ex possim conceptam. Et vel dolores perfecto deserunt, solet impedit ei vim. Est urbanitas disputationi mediocritatem te. Posse aliquip pro in, vocent eloquentiam ius ea, ei vis nibh affert philosophia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- site-canvas wrapper close -->
+    </div>
+    <!-- site-wrapper close -->
+    <script>
+    /*====================================
+                                            =            ON DOM READY            =
+                                            ====================================*/
+    $(function() {
+        $('.toggle-nav').click(function() {
+            // Calling a function in case you want to expand upon this.
+            toggleNav();
+        });
+    });
+
+    $(function() {
+        $('#about').click(function() {
+            $('#about').fadeOut("fast");
+        });
+        $('#back').click(function() {
+            $('#about').fadeIn("slow");
+        });
+    });
+
+    /*========================================
+    =            CUSTOM FUNCTIONS            =
+    ========================================*/
+    function toggleNav() {
+        if ($('#site-wrapper').hasClass('show-nav')) {
+            // Do things on Nav Close
+            $('#site-wrapper').removeClass('show-nav');
+        } else {
+            // Do things on Nav Open
+            $('#site-wrapper').addClass('show-nav');
+            $('#about').removeClass("display-none");
+        }
+
+        //$('#site-wrapper').toggleClass('show-nav');
+    }
+
+    $(document).keyup(function(e) {
+        if (e.keyCode == 27) {
+            if ($('#site-wrapper').hasClass('show-nav')) {
+                // Assuming you used the function I made from the demo
+                toggleNav();
+            }
+        }
+    });
+    </script>
+    <script>
+    $(document).ready(function() {
+
+        var $container = $('#container');
+        var $wrapper = $('.wrapper');
+        $container.imagesLoaded(function() {
+            $container.masonry({
+                itemSelector: '.item',
+                percentPosition: true,
+            });
+        });
+
+        $wrapper.imagesLoaded(function() {
+            $wrapper.masonry({
+                itemSelector: '.item',
+                percentPosition: true,
+            });
+        });
+
+        // var container = document.querySelector('#container');
+        // var msnry = new Masonry(container, {
+        //     // options
+        //     itemSelector: '.item'
+
+        // });
+
+        // var wrapper = document.querySelector('.wrapper');
+        // var msnry2 = new Masonry(wrapper, {
+        //     // options
+        //     itemSelector: '.item',
+        //     percentPosition: true
+        // });
+
+
+
+
+        $(function() {
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+
+        $("#fade").delay(700).animate({
+            "opacity": "1"
+        }, 500);
+
+    });
+    </script>
+    <script>
+    //hover of button
+    jQuery(function() {
+        $('.bTitle > .bMain').hover(function() {
+                var bProject = $(this).data("bproject");
+                $('.bgImg').css("background-image", "url(img/project_nav/" + bProject + ".jpg)");
+                $('.bgImg').css({
+                    opacity: 0.75
+                });
+                $(this).css('opacity', '0.5');
+                $(this).next().css('opacity', '0.5');
+            },
+            function() {
+                $('.bgImg').css({
+                    opacity: 0
+                });
+                $(this).css('opacity', '1');
+                $(this).next().css('opacity', '1');
+            });
+    });
+    </script>
+    <script>
+    //  jQuery(function() {
+    //          $(this).click(function() {
+    //          var pPage = $(this).data("page");
+
+    //      alert( "Handler for .click()" + pPage + " called.");
+    //      // $(".container").fadeOut();
+    //      // $(".pContainer").fadeIn();
+    // });
+    //  });
+
+    $(".bMain").click(function() {
+        $("#container").addClass("display-none");
+        $("#main-text").addClass("display-none");
+        $('.bgImg').addClass("display-none");
+        $("#project1").removeClass("display-none");
+        $('.hamburger').removeClass("display-none");
+        $('body').css('overflow', 'visible');
+        $('#project1').css('opacity', '1');
+    });
+
+    $(".hamburger").click(function() {
+        $("#container").removeClass("display-none");
+        $("#main-text").removeClass("display-none");
+        $('.bgImg').removeClass("display-none");
+        $("#project1").addClass("display-none");
+        $('.hamburger').addClass("display-none");
+        $('body').css('overflow', 'hidden');
+    });
+    </script>
+    <script>
+    var $hamburger = $(".hamburger");
+    $hamburger.hover(function(e) {
+        $hamburger.toggleClass("is-active");
+        // Do something else, like open/close menu
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Project Template Test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="author" content="Buddy Harris">
+	<meta name="description" content="A site built to test Project pages">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/bootstrap.min.311.js"></script>
+	<script type="text/javascript" src="http://use.typekit.net/zet4ybj.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<link href="css/bootstrap.min.311.css" media="all" rel="stylesheet" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:700|Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		
+		html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+			margin:0;
+			padding: 0;
+			border: none;
+			font: inherit;
+			vertical-align: baseline;
+			-webkit-margin-before: 0em;
+			-webkit-margin-after: 0em;
+			-webkit-margin-start: 0px;
+			-webkit-margin-end: 0px;
+			
+		}
+		
+		.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+			margin:0;
+			padding:0;
+		}
+		
+		html {
+			height:100%;
+			width:100%;
+		}
+		
+		p {
+			width: 100%;
+		}
+		
+		.navbar-default {
+			background-color: white !important;
+			border-color: white !important;
+			border-radius: 0 !important;
+		}
+		
+		.navbar-brand {
+			margin-left: 50px !important;
+			color: #000 !important;
+		}
+		
+		.navbar-nav.navbar-right:last-child {
+			margin-right: 50px;
+		}
+		
+		::-webkit-scrollbar { 
+   			display: none; 
+		}
+		
+		.above-all {
+			z-index:5000;
+		}		
+		
+		body {
+			height:100%;
+			transition: all 0.5s;
+			/* background-color: rgb(193,193,193); */
+			background-color: white;
+			background-image: url(img/pattern.png);
+			font-family: "Open Sans",sans-serif;
+		}
+		
+		
+		
+		body #container {
+			width: 80%;
+   			max-width: 1120px;
+    			margin: 5% auto;
+    			}
+    			
+    		body .container {
+			width: 80%;
+   			max-width: 960px;
+    			margin: 5% auto;
+			line-height: 1;
+    		}
+    			
+    		@media (max-width: 768px) {
+      			body #container {
+      				margin:15% auto;
+        			width: 90%; 
+        		}
+        		body .container {
+      				margin:15% auto;
+        			width: 90%; 
+        		}  
+        		.navbar-brand {
+        			margin-left:20px !important;
+        		}
+        	}
+        	
+        	@media (max-width: 768px) {
+        		.item, .item.w2, .item.w3, .item.w4 {
+        			width: 100% !important;
+        		}  
+        	}	
+		
+		.item { 
+			min-height: 150px;
+			width: 25%; 
+		}
+		
+		
+		.item.w2 {
+			width: 50%; 
+			background-color: green;
+		}
+		
+		.item.w3 {
+			width: 75%;
+			background-color: pink; 
+		}
+		
+		.item.w4 {
+			width: 100%;
+		}
+				
+		
+		@media (max-width: 400px) {
+			.item {
+        			min-height: 90px;
+        		}
+        		.copy {
+        			min-height: 90px;
+        		}      
+		}
+		
+        	#etc {
+        		background-position: center center;
+			background-size: cover;
+			background-image: url(img/project_nav/etc_960px.jpg);
+        	}
+        	
+        	#source {
+        		background-position: center center;
+			background-size: cover;
+			background-image: url(img/project_nav/source_960px.jpg);
+        	}
+        	
+        	#thesis {
+        		background-position: center 55%;
+			background-size: cover;
+			background-image: url(img/project_nav/thesis_960px.jpg);
+        	}
+        	
+        	#thought {
+        		background-position: center center;
+			background-size: cover;
+			background-image: url(img/project_nav/thought_960px.jpg);
+        	}
+        	
+        	#cosa {
+        		background-position: center center;
+			background-size: cover;
+			background-image: url(img/project_nav/cosa_960px.jpg);
+        	}
+        	
+        	#synes {
+        		background-position: center center;
+			background-size: cover;
+			background-image: url(img/project_nav/synes_960px.jpg);
+        	}
+		
+		#cold {
+        		background-position: center center;
+			background-size: cover;
+			background-image: url(img/project_nav/cold_960pxB.jpg);
+        	}
+        	
+        	#black {
+        		background-position: center center;
+			background-size: cover;
+			background-image: url(img/project_nav/black_960px.jpg);
+        	}
+		
+		#nar {
+        		background-position: center center;
+			background-size: cover;
+			background-image: url(img/project_nav/nar_960px.jpg);
+        	}
+		
+		#poster {
+        		background-position: center center;
+			background-size: cover;
+			background-image: url(img/project_nav/poster_960pxA.jpg);
+        	}
+		
+		#home {
+	position: fixed;
+	margin-top: 35px;
+	margin-left:35px;
+	z-index: 40;
+	font-family: Karla, sans-serif;
+	letter-spacing: 1.2px;
+	font-size: .75em;
+	display: block;
+	box-sizing: border-box;
+	cursor: pointer;
+	width: 100px;
+	float: left;
+	clear: left;
+}
+
+#about {
+	top: 0;
+	right: 0;
+	transform: matrix(1, 0, 0, 1, 0, 0);
+	position: fixed;
+	margin-top: 35px;
+	margin-right:35px;
+	z-index: 40;
+	text-align: right;
+	font-family: Karla, sans-serif;
+	letter-spacing: 1.2px;
+	font-size: .75em;
+	display: block;
+	box-sizing: border-box;
+/* 
+	cursor: pointer;
+ */
+	width: 100px;
+	float: left;
+	clear: left;
+}
+		/* PROJECT PAGE STYLING */
+		
+		.project-head {
+        		min-height: 700px;
+        		position: relative;
+        		margin-top: 0;
+        		background-position: center center;
+			background-size: cover;
+        	}
+        	
+		h1 {
+			position: relative;
+			vertical-align: bottom;
+			width: 80%;
+			font-size: 50px;
+			font-weight: 700;
+			padding-bottom:20px;
+		}
+		
+		h2 {
+			position: relative;
+			vertical-align: bottom;
+			font-size: 20px;
+			font-weight: 300;
+			width: 100%;
+		}
+		
+		buffer-large {
+			margin-top: 60px;
+		}
+		.container {
+			padding:0;
+			max-width: 1140px;
+			margin:5% auto;
+		}
+		.row {
+			margin:auto;
+		}
+		
+		p {
+			font-family: "Chaparral Pro",sans-serif;
+			line-height: 1.3em;
+			margin-bottom: 30px;
+			font-size: 20px;
+			color: #5f5f5f;
+		}
+		
+		h3 {
+			margin-top:35px;
+			margin-bottom: 24px;
+			font-weight: 400;
+			font-size: 30px;
+			color:#5f5f5f;
+		}
+		
+		
+		
+		
+	
+	</style>
+</head>
+<body id="fade" style="opacity:0;">
+<!-- style="background-color: rgb(12,76,76);" -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+    <a class="navbar-brand" href="index.html"><span style="font-variant:small-caps;font-weight:700; font-size:16px; margin-right:15px;">buddy harris</span><span style="font-variant:small-caps;font-weight:400;font-size:16px;">design</span></a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="glyphicon glyphicon-chevron-down"></span>
+        <!-- 
+<span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+ -->
+      </button>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li style="font-variant:small-caps;font-weight:400;"><a id="portfolio" href="#container">portfolio</a></li>
+        <li style="font-variant:small-caps;font-weight:400;"><a href="resume.pdf">resume</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation" style="min-height:20px;">
+  <div class="container-fluid">
+    <div class="col-md-12" style="margin-bottom:3px;">
+    	<p class="col-md-4 col-sm-4 col-xs-3" style="font-family: Open Sans;font-size:10px; padding:0px;"><span class=" col-lg-1 col-md-2 col-sm-2 col-xs-12" style="padding:0px;text-align:left;"><strong>© 2014</strong></span><span class="col-lg-11 col-md-10 col-sm-10 col-xs-12" style="padding:0px;text-align:left;"><strong>Buddy Harris Design</strong></span></p>
+    	<p class="col-md-8 col-sm-8 col-xs-9"style="font-family: Open Sans;text-align:right; font-size:10px;padding:0px;"><span style="margin-right:10px;">+609 941 4094</span><a href="mailto:bh@buddyharrisdesign.com"><span>bh@buddyharrisdesign.com</span></a></p>
+    </div>
+  </div>
+</nav>
+
+<!-- 
+<div id="project1">
+	<div class="container-fluid project-head project-inner" style="background-image: url(img/image.jpg)">
+		<div class="container">
+			<div class="row">
+				<h1 class="col-lg-12" style="padding-top: 40%; color: white;">Test Title of Project</h1>
+				<h2 class="col-lg-12" style="color: white;">Subcaption for the project explaining case study.</h2>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<p>Lorem ipsum dolor sit amet, eos ipsum paulo no. Sea mazim impedit philosophia cu, mei aeterno indoctum persequeris ea, ius diam dolores an. Eu mea civibus constituto, ea quando splendide forensibus qui. Vix no soluta repudiare percipitur, mei ex causae voluptaria. Dolor facilis aliquando mel ad, no luptatum vituperata disputando qui, sanctus mnesarchum est te. Nostrud constituam vim an, ad vim quis graeco.
+
+Sed ne vero probo detraxit, mel ne adolescens posidonium interesset. Has solet senserit no, no vero fierent pri. Eam ex possim conceptam. Et vel dolores perfecto deserunt, solet impedit ei vim. Est urbanitas disputationi mediocritatem te. Posse aliquip pro in, vocent eloquentiam ius ea, ei vis nibh affert philosophia.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<h3>Subject Header</h3>
+				<p>Lorem ipsum dolor sit amet, eos ipsum paulo no. Sea mazim impedit philosophia cu, mei aeterno indoctum persequeris ea, ius diam dolores an. Eu mea civibus constituto, ea quando splendide forensibus qui. Vix no soluta repudiare percipitur, mei ex causae voluptaria. Dolor facilis aliquando mel ad, no luptatum vituperata disputando qui, sanctus mnesarchum est te. Nostrud constituam vim an, ad vim quis graeco.
+
+Sed ne vero probo detraxit, mel ne adolescens posidonium interesset. Has solet senserit no, no vero fierent pri. Eam ex possim conceptam. Et vel dolores perfecto deserunt, solet impedit ei vim. Est urbanitas disputationi mediocritatem te. Posse aliquip pro in, vocent eloquentiam ius ea, ei vis nibh affert philosophia.</p>
+			</div>
+		</div>
+	</div>
+</div>
+ -->
+
+
+
+
+
+	<div id="container">
+  		<a href=""><div id="thought" class="item"></div></a>
+  		<div id="black" class="item"></div>
+  		<div id="synes" class="item w2"></div>
+ 		<div id="etc" class="item w3"></div>
+ 		<div id="nar"class="item w1"></div>
+ 		<div id="cosa" class="item w2"></div>
+ 		<div id="cold"class="item w2"></div>
+ 		<div id="thesis" class="item w4"></div>
+ 		<div id="poster" class="item"></div>
+ 		<div id="source" class="item w3"></div>
+	</div>
+
+
+	
+
+<script>
+$( document ).ready(function() {
+
+  var container = document.querySelector('#container');
+  var msnry = new Masonry( container, {
+      // options
+      itemSelector: '.item'      
+      
+  });
+
+  $(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+
+  $("#fade").delay(1000).animate({"opacity": "1"}, 700);
+
+});
+
+
+</script>
+<script>
+
+
+// Possible use for resizing for smaller screens
+
+
+// $(document).ready(function(){
+// resizeDiv();
+// 
+// });
+// 
+// window.onresize = function(event) {
+// resizeDiv();
+// }
+// 
+// function resizeDiv() {
+// 	if (window.innerWidth <= 768)
+//         {
+//   $('.project-inner').css('height', $(window).innerHeight());
+//   }
+// }
+</script>
+</body>
+</html>
